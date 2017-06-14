@@ -1,19 +1,7 @@
-// === COLORS ===
-$text-color: #222222;
-$theme-color: #170A48;
-$secondary-color: #F27731;
-$ternary-color: #CCF962;
-$link-color: $secondary-color;
-$menu-item-color: white;
+@import "variables";
+@import "mixins";
 
-// === FONTS ===
-$text-font: Verdana, Arial, sans-serif;
-$headline-font: 'Palatino Linotype', Georgia, serif;
-
-// === SIZES ===
-$content-width: 960px;
-$header-height: 60px;
-$footer-height: 90px;
+@include fancy-links;
 
 body {
   font-family: $text-font;
@@ -24,6 +12,10 @@ h1, h2, h3, h4 {
   font-family: $headline-font;
 }
 
+h2 {
+  @include large-text; 
+}
+
 p {
   font-family: $text-font
 }
@@ -32,7 +24,13 @@ a {
   color: $link-color;
 }
 
+.warning-button {
+  @include warning; 
+  padding: 8px 12px; 
+}
+
 #header {
+  @include box;
   height: $header-height;
   background-color: $theme-color;
 

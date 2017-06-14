@@ -1,3 +1,7 @@
+a {
+  font-style: italic;
+  text-decoration: none; }
+
 body {
   font-family: Verdana, Arial, sans-serif;
   color: #222222; }
@@ -5,13 +9,24 @@ body {
 h1, h2, h3, h4 {
   font-family: "Palatino Linotype", Georgia, serif; }
 
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
+
 p {
   font-family: Verdana, Arial, sans-serif; }
 
 a {
   color: #F27731; }
 
+.warning-button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px; }
+
 #header {
+  border-radius: 6px;
+  border: 1px solid #333;
   height: 60px;
   background-color: #170A48; }
   #header #main-menu li {
