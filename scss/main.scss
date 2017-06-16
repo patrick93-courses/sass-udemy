@@ -29,6 +29,12 @@ a {
   padding: 8px 12px; 
 }
 
+@include apply-to-ie-6 {
+  body {
+    font-size: 125%;
+  }
+}
+
 #header {
   @include box(8px, 1px solid #999);
   @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);

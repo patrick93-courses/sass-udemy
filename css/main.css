@@ -24,6 +24,9 @@ a {
   color: #fff;
   padding: 8px 12px; }
 
+* html body {
+  font-size: 125%; }
+
 #header {
   border-radius: 8px;
   border: 1px solid #999;
