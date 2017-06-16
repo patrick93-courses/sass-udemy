@@ -8,7 +8,11 @@
 
 body {
   font-family: $text-font;
-  color: $text-color;  
+  color: $text-color;
+
+  @include large-screens {
+    font-size: 125%;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -61,6 +65,10 @@ a {
 
 #main {
   width: $content-width;
+  @include large-screens {
+    width: auto;
+    max-width: $content-width
+  }
   margin-left: auto;
   margin-right: auto;
   
