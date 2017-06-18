@@ -6,7 +6,10 @@ a {
 
 body {
   font-family: "Alegreya Sans", Arial, sans-serif;
-  color: #222222; }
+  color: #222222;
+  color: #0a0f32;
+  background-color: white;
+  font-size: 1.125em; }
   @media only screen and (max-width: 960px) {
     body {
       font-size: 125%; } }
@@ -23,11 +26,15 @@ p {
 
 a {
   color: #F27731; }
+  a:hover {
+    color: #ca510d; }
 
 .warning-button {
   background-color: orange;
   color: #fff;
   padding: 8px 12px; }
+  .warning-button:hover {
+    background-color: #ffb733; }
 
 * html body {
   font-size: 125%; }
@@ -43,7 +50,13 @@ a {
   #header #main-menu li {
     display: inline; }
   #header #main-menu a {
-    color: white; }
+    color: white;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(254, 254, 254, 0);
+    transition: border-bottom 0.5s;
+    transition-timing-function: ease-in-out; }
+    #header #main-menu a:hover {
+      border-bottom: 1px solid #fefefe; }
 
 #main {
   width: 960px;
@@ -53,7 +66,20 @@ a {
     #main {
       width: auto;
       max-width: 960px; } }
+  #main #content {
+    float: left;
+    width: 69.75%; }
+  #main #sidebar {
+    float: right;
+    width: 23.25%; }
+    #main #sidebar li {
+      list-style: none;
+      padding: 1em 1.25em;
+      border-bottom: 1px dashed #999; }
+      #main #sidebar li:hover {
+        background-color: #efefef; }
 
 #footer {
+  clear: both;
   height: 90px;
   background-color: #CCF962; }
