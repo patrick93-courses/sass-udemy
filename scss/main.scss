@@ -7,6 +7,22 @@
 
 @include fancy-links;
 
+@include apply-to-ie-6 {
+  body {
+    font-size: 125%;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.critical-error {
+  @extend .error;
+  bottom: 1px solid red;
+  font-weight: bold;
+}
+
 body {
   font-family: $text-font;
   color: $text-color;
@@ -38,15 +54,29 @@ a {
   }
 }
 
+%highlight {
+  font-style: italic;
+}
+
+.sub-title {
+  @extend %highlight;
+  font-size: 20px;
+}
+
 .warning-button {
   @include warning; 
   padding: 8px 12px; 
 }
 
-@include apply-to-ie-6 {
-  body {
-    font-size: 125%;
-  }
+.cta-button {
+  @extend .warning-button;
+  @include rounded;
+  font-weight: bold;
+}
+
+.super-cta-button {
+  @extend .cta-button;
+  font-size: em(20px);
 }
 
 #header {
